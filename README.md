@@ -55,14 +55,15 @@ pip install -r requirements.txt
 
 ## Project Structure
 
-`data` : data directory  
-`notebooks` : A simple notebook on how to use the package.  
-`screenshots` : A sample screenshots of analysis result.  
-`scripts` : script files.
-`requirements.txt`: a text file lsiting the projet's dependancies  
-`app.py`: entry file for the streamlit application  
-`setup.py`: a configuration file for installing the scripts as a package  
-`README.md`: Markdown text with a brief explanation of the project and the repository structure.
+    .
+    ├── data                           # data directory
+    ├── notebooks                      # A simple - notebook on how to use the package.
+    ├── screenshots                    # A sample screenshots of analysis result.
+    ├── scripts                        # script files.
+    ├── requirements.txt               # a text file lsiting the projet's dependancies
+    ├── app.py                         # entry file for the streamlit application
+    ├── setup.py                       # a configuration file for installing the scripts as a package
+    └── README.md                      # Markdown text with explanation of the project and the structure.
 
 ---
 
