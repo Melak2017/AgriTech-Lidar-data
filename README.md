@@ -41,6 +41,8 @@ conda activate geo_env
 conda config --env --add channels conda-forge
 conda config --env --set channel_priority strict
 conda install python=3 geopandas
+
+pip install pdal
 ```
 
 #### Clone the repository and install the required packages.
