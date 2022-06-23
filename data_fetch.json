@@ -34,7 +34,7 @@
     {
         "filename": "",
         "gdalopts": "tiled=yes,     compress=deflate",
-        "inputs": [ "writerslas" ],
+        "inputs": [ "writers_las" ],
         "nodata": -9999,
         "output_type": "idw",
         "resolution": 1,
