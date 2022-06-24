@@ -1,22 +1,26 @@
+
 import unittest
-import sys, os
+import sys
+import os
 import requests
 
-sys.path.append(os.path.abspath(os.path.join('../')))
+sys.path.insert(0, '../scripts/')
+sys.path.append(os.path.abspath(os.path.join('scripts')))
+from ept_info import Info
 
-from scripts.ept_info import Info
 
 url = "https://s3-us-west-2.amazonaws.com/usgs-lidar-public/USGS_LPC_CO_SoPlatteRiver_Lot5_2013_LAS_2015/ept.json"
 
+
 class TestInfo(unittest.TestCase):
     """
-		A class for unit-testing function in the ept_info.py file
+                A class for unit-testing function in the ept_info.py file
 
-		Args:
+                Args:
         -----
-			unittest.TestCase this allows the new class to inherit
-			from the unittest module
-	"""
+                        unittest.TestCase this allows the new class to inherit
+                        from the unittest module
+        """
 
     def setUp(self):
         data = requests.get(url).text
@@ -36,24 +40,24 @@ class TestInfo(unittest.TestCase):
 
     def test_get_bounds(self):
         actual_bounds = [
-                        -11752672,
-                        4740364,
-                        -68269,
-                        -11610700,
-                        4882336,
-                        73703
-                    ]
+            -11752672,
+            4740364,
+            -68269,
+            -11610700,
+            4882336,
+            73703
+        ]
         self.assertEqual(self.ept.get_bounds(), actual_bounds)
-    
+
     def test_get_conforming(self):
         actual_bounds_conforming = [
-                                -11752670,
-                                4750545,
-                                1136,
-                                -11610701,
-                                4872154,
-                                4297
-                            ]
+            -11752670,
+            4750545,
+            1136,
+            -11610701,
+            4872154,
+            4297
+        ]
         self.assertEqual(self.ept.get_conforming(), actual_bounds_conforming)
 
     def test_get_datatype(self):
@@ -61,11 +65,9 @@ class TestInfo(unittest.TestCase):
         self.assertEqual(self.ept.get_datatype(), actual_datatype)
 
     def test_get_hierachytype(self):
-        actual_hierarchy= "json"
+        actual_hierarchy = "json"
         self.assertEqual(self.ept.get_hierarchytype(), actual_hierarchy)
 
 
 if __name__ == '__main__':
-	unittest.main()
-
-    
+    unittest.main()

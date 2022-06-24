@@ -1,7 +1,7 @@
 import json
 #from lidardataextractor import schema
-import pyproj
-from pyproj import CRS
+#import pyproj
+#from pyproj import CRS
 #from lidardataextractor.schema import Schema
 
 class Info(object):
@@ -43,9 +43,4 @@ class Info(object):
         return self.data['hierarchyType']
     hierarchytype = property(get_hierarchytype)
 
-    def get_srs(self) -> pyproj.crs.crs.CRS:
-        """ """
-        wkt = self.data['srs']['wkt']
-        crs = CRS.from_user_input(wkt)
-        return crs
-    srs = property(get_srs)
+    
