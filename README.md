@@ -61,12 +61,21 @@ pip install -r requirements.txt
     ├── .github/workflows              # github actions
     ├── .vscode                        # collection of folders that are opened in a VS Code window.
     ├── assets
+    |   └──data_fetch.json             # pipline json file
+    |
     ├── data                           # data directory
     ├── docs                           # HTML pages
     ├── notebooks                      # A simple - notebook on how to use the package.
     ├── screenshots                    # A sample screenshots of analysis result.
     ├── scripts                        # script files.
+    |    ├── boundaries.py             # python file for boundry setting
+    │    ├── ept_info.py               # pyhon file for info ept
+    │    ├── elevation_extractor.py    # python file elevation extractor
+    │    ├── lidar_fetch_data.py       # python file for data fecthing
+    │    └── Lidar_Package.py          # final python module to use
+    |
     ├── tests                          # directory for unit testing
+    |    └── test_get_data.py          # unit-test file
     ├── requirements.txt               # a text file lsiting the projet's dependancies
     ├── .gitignore                     # files to ignore when committing
     ├── setup.py                       # a configuration file for installing the scripts as a package
