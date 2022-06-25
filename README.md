@@ -58,12 +58,17 @@ pip install -r requirements.txt
 ## Project Structure
 
     .
+    ├── .github/workflows              # github actions
+    ├── .vscode                        # collection of folders that are opened in a VS Code window.
+    ├── assets
     ├── data                           # data directory
+    ├── docs                           # HTML pages
     ├── notebooks                      # A simple - notebook on how to use the package.
     ├── screenshots                    # A sample screenshots of analysis result.
     ├── scripts                        # script files.
+    ├── tests                          # directory for unit testing
     ├── requirements.txt               # a text file lsiting the projet's dependancies
-    ├── app.py                         # entry file for the streamlit application
+    ├── .gitignore                     # files to ignore when committing
     ├── setup.py                       # a configuration file for installing the scripts as a package
     └── README.md                      # Markdown text with explanation of the project and the structure.
 
